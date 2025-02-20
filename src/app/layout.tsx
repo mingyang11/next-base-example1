@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, ADLaM_Display } from 'next/font/google';
-import Header from '@/components/header';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import './globals.css';
 
