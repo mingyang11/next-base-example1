@@ -1,10 +1,11 @@
 import { Card } from 'antd';
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  return {
-    title: `博客详情${params.id}`,
-  };
-}
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const id = (await params).id;
+//   return {
+//     title: `博客详情${id}`,
+//   };
+// }
 
 function Slug({ params }: { params: { id: string } }) {
   return (
