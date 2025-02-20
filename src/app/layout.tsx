@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, ADLaM_Display } from 'next/font/google';
-import Header from '@/components/header';
 import './globals.css';
-import Link from 'next/link';
+import React from 'react';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,29 +25,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  analytics,
-  team,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
-  analytics: React.ReactNode;
-  team: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${adLaMDisplay.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="container mx-auto">
-          <div className="flex justify-center gap-5 text-blue-500">
-            <Link href={'/'}>Home</Link>
-            <Link href={'/visitors'}>Visitors</Link>
-          </div>
-          <div className="flex justify-center gap-5">
-            {team}
-            {analytics}
-          </div>
-          {children}
-        </div>
+        {children}
+        {modal}
       </body>
     </html>
   );
