@@ -25,7 +25,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;
@@ -36,7 +35,6 @@ export default function RootLayout({
         className={`${adLaMDisplay.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        {modal}
       </body>
     </html>
   );
