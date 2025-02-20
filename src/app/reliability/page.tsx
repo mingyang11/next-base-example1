@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <Hero img={homeimage} content="reliability" />;
+  return <Hero img={homeimage} content="reliabilitydemo~~~~~~~" />;
 }
